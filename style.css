@@ -23,7 +23,9 @@ menu {
   display: flex;
   align-items: center;
   /* height: 100%; */
-  flex-grow: 1;
+  /* flex-grow: 1; */
+  width: 65%;
+
   margin: 0 5rem;
   justify-content: space-around;
 }
@@ -52,4 +54,35 @@ nav button {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   width: 8%;
+}
+/* End of header/nav */
+
+/* Banner Section */
+.banner {
+  /* border: 1px solid rgb(255, 0, 0); */
+  background: url(./images/banner-img.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  height: 70vh;
+  color: white;
+
+  display: flex;
+  align-items: center;
+}
+
+.banner h2 {
+  font-size: 4rem;
+}
+
+.featured-banner-text {
+  margin-left: 10rem;
+  width: 45%;
+}
+
+.banner p {
+  font-size: 1rem;
+  margin-top: 1rem;
 }
