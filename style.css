@@ -148,6 +148,118 @@ nav button {
 
 /* New Releases Section */
 .new-releases {
-  height: 60vh;
-  border: 1px solid red;
+  height: 70vh;
+  background-color: #f6f6f6;
 }
+
+.heading-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0 0 0;
+}
+.heading-section h2 {
+  font-size: 2.5rem;
+  color: #001d5d;
+  padding-bottom: 1rem;
+}
+
+.heading-section span {
+  display: inline-block;
+  width: 55%;
+  font-size: 1.125rem;
+}
+.heading-section div {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.card {
+  display: flex;
+  width: 60%;
+  height: 15rem;
+  -webkit-box-shadow: 6px 3px 5px -3px rgba(92, 92, 92, 0.39);
+  -moz-box-shadow: 6px 3px 5px -3px rgba(92, 92, 92, 0.39);
+  box-shadow: 6px 3px 5px -3px rgba(92, 92, 92, 0.39);
+  margin-bottom: 2rem;
+  padding: 3rem;
+  background-color: white;
+  /* justify-content: center;
+  align-items: center; */
+}
+
+.card img {
+  height: 100%;
+}
+
+.card-body h2 {
+  color: #001d5d;
+}
+
+.card-body {
+  padding: 0 1rem;
+}
+
+.slick-slide {
+  /* border: 1px solid #ccc; */
+  display: flex !important;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+/* End of New Releases Section */
+
+/* Google maps section */
+
+.google-maps-section {
+  height: 70vh;
+}
+
+/* End Google maps section */
+
+/* Get in touch */
+.get-in-touch {
+  height: 80vh;
+  background-color: white;
+  display: flex;
+}
+
+.get-in-touch .form {
+  width: 65%;
+  border: 1px solid #ccc;
+}
+
+.form-container {
+  padding: 5rem 8rem 5rem 5rem;
+}
+
+.get-in-touch .img-in-form {
+  width: 35%;
+  background: url(./images/artists/harry-swales-0l0KjNoAfAk-unsplash.jpg)
+    no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.form h2 {
+  color: #001d5d;
+  font-size: 2.5rem;
+}
+
+.form span {
+  display: inline-block;
+  margin-top: 1.25rem;
+  font-size: 1.125rem;
+  width: 55%;
+  color: rgba(92, 92, 92, 0.39);
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+/* End of Get in touch */
