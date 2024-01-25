@@ -144,6 +144,12 @@ nav button {
   color: #42a418;
 }
 
+button.slick-prev {
+  left: 5rem;
+}
+button.slick-next {
+  right: 5rem;
+}
 /* End of Featured Section */
 
 /* New Releases Section */
