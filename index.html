@@ -193,10 +193,42 @@
             >
 
             <form action="">
-              <div class="input-section">
-                <label for="">First Name</label>
-                <input type="text" />
-              </div>
+              <section class="form-row">
+                <div class="input-section">
+                  <label for="">First Name</label>
+                  <input type="text" placeholder="First Name" />
+                </div>
+                <div class="input-section">
+                  <label for="">Last Name</label>
+                  <input type="text" placeholder="Last Name" />
+                </div>
+              </section>
+
+              <section class="form-row">
+                <div class="input-section">
+                  <label for="">Email Address</label>
+                  <input type="email" placeholder="Email Address" />
+                </div>
+                <div class="input-section">
+                  <label for="">Reason For Contacting</label>
+                  <select
+                    name="Reason For Contacting"
+                    id=""
+                    placeholder="Select One"
+                  >
+                    <option value="0">Select one</option>
+                  </select>
+                </div>
+              </section>
+
+              <label class="message-label" for="">Message Optional</label>
+              <textarea
+                placeholder="Write a brief message"
+                id=""
+                cols=""
+                rows=""
+              ></textarea>
+              <button>Submit</button>
             </form>
           </div>
         </div>
@@ -208,7 +240,50 @@
         </div>
       </section>
 
-      <footer></footer>
+      <footer>
+        <!-- <hr /> -->
+        <section class="site-map">
+          <div class="column first">
+            <img src="Logo-White.svg" alt="" /><br /><br />
+            8521 W Fairfax Rd<br />
+            Los Angeles, CA<br /><br />
+            990210 <br />
+            (909) 505 4302
+          </div>
+          <div class="column">
+            Explore<br /><br />
+            About Us<br /><br />
+            Our Story<br /><br />
+            Team<br /><br />
+            Careers<br /><br />
+            FAQ<br /><br />
+          </div>
+          <div class="column">
+            Music<br /><br />
+            Missing Out<br /><br />
+            Trapsoul<br /><br />
+            Sonder Sons<br /><br />
+            Paradise Today<br /><br />
+            Needed<br /><br />
+          </div>
+          <div class="column">
+            Artist<br /><br />
+            Brent Faiyaz<br /><br />
+            Drake<br /><br />
+            Bryson Tiller<br /><br />
+            Young Ford<br /><br />
+            Roy Fresco<br /><br />
+          </div>
+          <div class="column">
+            Records<br /><br />
+            What a Time<br /><br />
+            Coming Home<br /><br />
+            Always First<br /><br />
+            So Far So Gone<br /><br />
+            Big Buzz<br /><br />
+          </div>
+        </section>
+      </footer>
     </section>
 
     <script

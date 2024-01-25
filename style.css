@@ -174,6 +174,7 @@ button.slick-next {
   display: inline-block;
   width: 55%;
   font-size: 1.125rem;
+  color: #777777;
 }
 .heading-section div {
   text-align: center;
@@ -189,6 +190,7 @@ button.slick-next {
   box-shadow: 6px 3px 5px -3px rgba(92, 92, 92, 0.39);
   margin-bottom: 2rem;
   padding: 3rem;
+  color: #777777;
   background-color: white;
   /* justify-content: center;
   align-items: center; */
@@ -225,22 +227,18 @@ button.slick-next {
 
 /* Get in touch */
 .get-in-touch {
-  height: 80vh;
+  height: 100vh;
   background-color: white;
   display: flex;
 }
 
 .get-in-touch .form {
-  width: 65%;
+  width: 60%;
   border: 1px solid #ccc;
 }
 
-.form-container {
-  padding: 5rem 8rem 5rem 5rem;
-}
-
 .get-in-touch .img-in-form {
-  width: 35%;
+  width: 40%;
   background: url(./images/artists/harry-swales-0l0KjNoAfAk-unsplash.jpg)
     no-repeat center center;
   -webkit-background-size: cover;
@@ -249,23 +247,130 @@ button.slick-next {
   background-size: cover;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  padding: 5rem 15rem 5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
 .form h2 {
   color: #001d5d;
   font-size: 2.5rem;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 .form span {
   display: inline-block;
   margin-top: 1.25rem;
+  margin-bottom: 2.25rem;
   font-size: 1.125rem;
-  width: 55%;
-  color: rgba(92, 92, 92, 0.39);
+  width: 70%;
+  color: #777777;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
 }
 
 .input-section {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
+  color: #777777;
+  margin-bottom: 1.25rem;
+}
+
+input,
+option,
+select,
+textarea {
+  padding: 1.25rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1.25rem;
+  color: #777777;
+}
+
+select {
+  padding-right: 20px; /* Adjust the value based on your preference */
+  /*background-image: url("arrow-icon.svg"); /* Replace 'arrow-icon.png' with your arrow image or use a built-in icon */
+  background-repeat: no-repeat;
+  background-position: right center;
+  -webkit-appearance: none; /* Remove default arrow in Chrome/Safari/Edge */
+  -moz-appearance: none; /* Remove default arrow in Firefox */
+  appearance: none; /* Remove default arrow in other browsers */
+}
+
+select::after {
+  content: ""; /* Empty content for pseudo-element */
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 6px 0; /* Adjust the size of the arrow */
+  border-color: #000 transparent transparent; /* Adjust the color of the arrow */
+  position: absolute;
+  top: 50%;
+  right: 100px; /* Adjust the right position based on your design */
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+  pointer-events: none; /* Ensure pseudo-element is not clickable */
+}
+
+.message-label {
+  color: #777777;
+  margin-bottom: 1.25rem;
+}
+
+textarea {
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+}
+
+form button {
+  background-color: #d9f0d0;
+  border: none;
+  padding: 1.25rem;
+  width: 30%;
 }
 
 /* End of Get in touch */
+
+/* Footer Section */
+
+footer {
+  height: 40vh;
+  background-color: #001d5d;
+  display: flex;
+  width: 100%;
+}
+
+.site-map {
+  display: flex;
+  /* flex-direction: column; */
+  flex: 1;
+  justify-content: space-between;
+  padding: 4rem;
+  width: 50%;
+  position: relative;
+}
+
+.column {
+  color: white;
+  flex: 1;
+}
+
+.site-map .column:first-child {
+  flex-grow: 1.2;
+}
