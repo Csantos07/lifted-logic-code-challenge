@@ -405,7 +405,7 @@ footer {
   /* flex-direction: column; */
   flex: 1;
   justify-content: space-between;
-  padding: 4rem;
+  padding: 4rem 4rem 0;
   /* width: 50%; */
   position: relative;
 }
