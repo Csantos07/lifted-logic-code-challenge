@@ -10,11 +10,23 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+.form-container {
+  overflow: hidden;
+  position: relative;
+}
+
 nav {
+  position: fixed;
+  /* width: 100%; */
+  top: 0;
+  left: 0;
+  right: 0;
   padding: 1rem 3.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
+  background-color: white;
 }
 
 menu {
@@ -24,6 +36,7 @@ menu {
 
   margin: 0 5rem;
   justify-content: space-around;
+  z-index: 2;
 }
 
 menu section {
@@ -40,19 +53,34 @@ a {
   color: inherit;
   cursor: pointer;
 }
+.nav-buttons {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-buttons:hover,
+nav button:hover {
+  transform: scale(1.5);
+  font-weight: 600;
+}
 
 nav button {
+  display: flex; /* Add this line */
+  align-items: center; /* Add this line */
+  text-align: center;
+  justify-content: center;
   padding: 0.5rem 1rem;
   border: none;
   background-color: #d9f0d0;
   cursor: pointer;
+  width: auto;
   transition: all 0.2s ease-in-out;
-  width: 8%;
 }
 /* End of header/nav */
 
 /* Banner Section */
 .banner {
+  position: relative;
+  z-index: -1;
   background: url(./images/banner-img.jpg) no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -64,6 +92,19 @@ nav button {
 
   display: flex;
   align-items: center;
+  animation: zoomInOut 10s infinite alternate;
+  overflow: hidden;
+}
+@keyframes zoomInOut {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .banner h2 {
@@ -103,6 +144,8 @@ nav button {
 
 /* Featured Section */
 .featured-section {
+  position: relative;
+  z-index: 1;
   display: flex;
   height: 50vh;
   padding: 0rem 4rem;
@@ -353,6 +396,7 @@ footer {
   height: 40vh;
   background-color: #001d5d;
   display: flex;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -362,15 +406,51 @@ footer {
   flex: 1;
   justify-content: space-between;
   padding: 4rem;
-  width: 50%;
+  /* width: 50%; */
   position: relative;
 }
 
+footer {
+  color: white;
+}
 .column {
   color: white;
   flex: 1;
 }
 
 .site-map .column:first-child {
-  flex-grow: 1.2;
+  flex-grow: 1.5;
+}
+footer hr {
+  margin: 0 50px;
+  color: white;
+}
+
+.socials-terms-and-privacy {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 50px;
+  /* margin-top: 2rem; */
+  background-color: #001d5d;
+  /* border-top: #f6f6f6 1px solid; */
+}
+
+.left-side {
+  display: flex;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.left-side div {
+  margin-right: 2rem;
+}
+
+.right-side {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid white; */
+  width: 300px;
+  align-items: right;
+  color: white;
 }
