@@ -201,6 +201,13 @@ button.slick-next {
   background-color: #f6f6f6;
 }
 
+@media (max-height: 800px) {
+  /* Your styles go here */
+  .new-releases {
+    height: 85vh;
+  }
+}
+
 .heading-section {
   display: flex;
   justify-content: center;
@@ -264,6 +271,7 @@ button.slick-next {
 
 .google-maps-section {
   height: 70vh;
+  padding: 0 2rem;
 }
 
 /* End Google maps section */
