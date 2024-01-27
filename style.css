@@ -423,6 +423,10 @@ footer {
   color: white;
 }
 
+.mobile {
+  display: none;
+}
+
 .column {
   color: white;
   flex: 1;
@@ -433,14 +437,14 @@ footer {
 }
 
 footer hr {
-  margin: 0 50px;
+  margin: 0 3.125rem;
   color: white;
 }
 
 .socials-terms-and-privacy {
   display: flex;
   justify-content: space-between;
-  padding: 0rem 50px;
+  padding: 0rem 3.125rem;
   background-color: #001d5d;
 }
 
@@ -458,7 +462,7 @@ footer hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 300px;
+  width: 18.75rem;
   align-items: right;
   color: white;
 }
@@ -490,11 +494,77 @@ footer hr {
     z-index: -1;
     background: url(./images/mobile-banner-img.png) no-repeat center center;
     background-size: cover;
-    height: 80vh;
+    height: 40vh;
     color: white;
     display: flex;
     align-items: center;
     animation: zoomInOut 10s infinite alternate;
     overflow: hidden;
+  }
+
+  .banner-content h2 {
+    padding-top: 2.8rem;
+    font-size: 2rem;
+  }
+
+  .banner-content p {
+    font-size: 0.7rem;
+  }
+
+  .featured-banner-text {
+    margin-left: 2rem;
+    width: 80%;
+  }
+
+  .google-maps-section {
+    height: 30vh;
+  }
+  .site-map {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    font-size: 0.6rem;
+  }
+  .site-map .column:first-child {
+    flex-grow: 0;
+  }
+
+  .column {
+    color: white;
+    flex: 0;
+  }
+
+  .socials-terms-and-privacy {
+    padding: 0rem 1rem;
+    font-size: 0.6rem;
+  }
+
+  footer hr {
+    margin: 0 1rem;
+  }
+
+  .right-side {
+    width: 8rem;
+  }
+
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .featured-section {
+    display: none;
+  }
+
+  .new-releases {
+    display: none;
+  }
+
+  .get-in-touch {
+    display: none;
   }
 }
