@@ -1,24 +1,22 @@
+/* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
+/* Reset */
 * {
   padding: 0;
   margin: 0;
 }
 
+/* Body */
 body {
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
 
-.form-container {
-  overflow: hidden;
-  position: relative;
-}
-
+/* Navigation */
 nav {
   position: fixed;
-  /* width: 100%; */
   top: 0;
   left: 0;
   right: 0;
@@ -30,43 +28,37 @@ nav {
   background-color: white;
 }
 
-menu {
+nav menu {
   display: flex;
   align-items: center;
   width: 65%;
-
   margin: 0 5rem;
   justify-content: space-around;
   z-index: 2;
 }
 
-menu section {
+nav menu section {
   display: flex;
   align-items: center;
 }
 
-menu section a {
+nav menu section a {
   margin-left: 1rem;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-}
-.nav-buttons {
+nav .nav-buttons {
   transition: transform 0.2s ease-in-out;
 }
 
-.nav-buttons:hover,
+nav .nav-buttons:hover,
 nav button:hover {
   transform: scale(1.5);
   font-weight: 600;
 }
 
 nav button {
-  display: flex; /* Add this line */
-  align-items: center; /* Add this line */
+  display: flex;
+  align-items: center;
   text-align: center;
   justify-content: center;
   padding: 0.5rem 1rem;
@@ -76,26 +68,64 @@ nav button {
   width: auto;
   transition: all 0.2s ease-in-out;
 }
-/* End of header/nav */
+
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bar {
+  background-color: #001d5d;
+  height: 3px;
+  width: 30px;
+  transition: transform 2s, opacity 1s;
+}
+
+.bar:nth-child(2) {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+/* Active state for the X */
+.nav-toggle.active .bar:nth-child(1) {
+  transform: rotate(405deg) translate(9px, 0px);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+  transform: rotate(-405deg) translate(11px, -2px);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
 
 /* Banner Section */
+.stuff {
+  overflow: hidden;
+}
 .banner {
   position: relative;
   z-index: -1;
   background: url(./images/banner-img.jpg) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
-
   height: 80vh;
   color: white;
-
   display: flex;
   align-items: center;
   animation: zoomInOut 10s infinite alternate;
   overflow: hidden;
 }
+
 @keyframes zoomInOut {
   0% {
     transform: scale(1);
@@ -141,7 +171,6 @@ nav button {
 .play-row p {
   margin-top: 0;
 }
-/* End of Banner Section */
 
 /* Featured Section */
 .featured-section {
@@ -155,9 +184,6 @@ nav button {
 
 .featured-image {
   background: url(./images/artists/brentFaiyaz.webp) no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
   flex: 1.2;
 }
@@ -191,22 +217,15 @@ nav button {
 button.slick-prev {
   left: 5rem;
 }
+
 button.slick-next {
   right: 5rem;
 }
-/* End of Featured Section */
 
 /* New Releases Section */
 .new-releases {
   height: 70vh;
   background-color: #f6f6f6;
-}
-
-@media (max-height: 800px) {
-  /* Your styles go here */
-  .new-releases {
-    height: 85vh;
-  }
 }
 
 .heading-section {
@@ -215,6 +234,7 @@ button.slick-next {
   align-items: center;
   padding: 5rem 0 0 0;
 }
+
 .heading-section h2 {
   font-size: 2.5rem;
   color: #001d5d;
@@ -227,6 +247,7 @@ button.slick-next {
   font-size: 1.125rem;
   color: #777777;
 }
+
 .heading-section div {
   text-align: center;
   padding-bottom: 2rem;
@@ -236,15 +257,11 @@ button.slick-next {
   display: flex;
   width: 60%;
   height: 15rem;
-  -webkit-box-shadow: 6px 3px 5px -3px rgba(92, 92, 92, 0.39);
-  -moz-box-shadow: 6px 3px 5px -3px rgba(92, 92, 92, 0.39);
   box-shadow: 6px 3px 5px -3px rgba(92, 92, 92, 0.39);
   margin-bottom: 2rem;
   padding: 3rem;
   color: #777777;
   background-color: white;
-  /* justify-content: center;
-  align-items: center; */
 }
 
 .card img {
@@ -260,23 +277,16 @@ button.slick-next {
 }
 
 .slick-slide {
-  /* border: 1px solid #ccc; */
   display: flex !important;
   justify-content: center;
-  /* align-items: center; */
 }
 
-/* End of New Releases Section */
-
-/* Google maps section */
-
+/* Google Maps Section */
 .google-maps-section {
   height: 70vh;
 }
 
-/* End Google maps section */
-
-/* Get in touch */
+/* Get in Touch Section */
 .get-in-touch {
   height: 100vh;
   background-color: white;
@@ -292,9 +302,6 @@ button.slick-next {
   width: 40%;
   background: url(./images/artists/harry-swales-0l0KjNoAfAk-unsplash.jpg)
     no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -320,6 +327,7 @@ form {
   flex-direction: column;
   flex-grow: 1;
 }
+
 .form span {
   display: inline-block;
   margin-top: 1.25rem;
@@ -353,28 +361,27 @@ textarea {
 }
 
 select {
-  padding-right: 20px; /* Adjust the value based on your preference */
-  /*background-image: url("arrow-icon.svg"); /* Replace 'arrow-icon.png' with your arrow image or use a built-in icon */
+  padding-right: 20px;
   background-repeat: no-repeat;
   background-position: right center;
-  -webkit-appearance: none; /* Remove default arrow in Chrome/Safari/Edge */
-  -moz-appearance: none; /* Remove default arrow in Firefox */
-  appearance: none; /* Remove default arrow in other browsers */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 select::after {
-  content: ""; /* Empty content for pseudo-element */
+  content: "";
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 6px 6px 0; /* Adjust the size of the arrow */
-  border-color: #000 transparent transparent; /* Adjust the color of the arrow */
+  border-width: 6px 6px 0;
+  border-color: #000 transparent transparent;
   position: absolute;
   top: 50%;
-  right: 100px; /* Adjust the right position based on your design */
+  right: 100px;
   transform: translateY(-50%);
   transform: translateX(-50%);
-  pointer-events: none; /* Ensure pseudo-element is not clickable */
+  pointer-events: none;
 }
 
 .message-label {
@@ -386,7 +393,7 @@ textarea {
   font-family: "Inter", sans-serif;
   width: 100%;
   height: 100%;
-  box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+  box-sizing: border-box;
 }
 
 form button {
@@ -396,10 +403,7 @@ form button {
   width: 30%;
 }
 
-/* End of Get in touch */
-
 /* Footer Section */
-
 footer {
   height: 40vh;
   background-color: #001d5d;
@@ -410,17 +414,15 @@ footer {
 
 .site-map {
   display: flex;
-  /* flex-direction: column; */
   flex: 1;
   justify-content: space-between;
   padding: 4rem 4rem 0;
-  /* width: 50%; */
-  position: relative;
 }
 
 footer {
   color: white;
 }
+
 .column {
   color: white;
   flex: 1;
@@ -429,6 +431,7 @@ footer {
 .site-map .column:first-child {
   flex-grow: 1.5;
 }
+
 footer hr {
   margin: 0 50px;
   color: white;
@@ -438,9 +441,7 @@ footer hr {
   display: flex;
   justify-content: space-between;
   padding: 0rem 50px;
-  /* margin-top: 2rem; */
   background-color: #001d5d;
-  /* border-top: #f6f6f6 1px solid; */
 }
 
 .left-side {
@@ -457,8 +458,43 @@ footer hr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* border: 1px solid white; */
   width: 300px;
   align-items: right;
   color: white;
+}
+
+/* Media Queries */
+
+/* Short Screens */
+@media (max-height: 850px) {
+  .new-releases {
+    height: 85vh;
+  }
+}
+
+/* Mobile Screens */
+@media (max-width: 600px) {
+  nav {
+    padding: 1rem 1.5rem;
+  }
+  nav menu {
+    display: none;
+  }
+
+  nav button {
+    display: none;
+  }
+
+  .banner {
+    position: relative;
+    z-index: -1;
+    background: url(./images/mobile-banner-img.png) no-repeat center center;
+    background-size: cover;
+    height: 80vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    animation: zoomInOut 10s infinite alternate;
+    overflow: hidden;
+  }
 }
