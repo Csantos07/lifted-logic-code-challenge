@@ -214,6 +214,7 @@ a {
   color: #42a418;
 }
 
+/* Carousel */
 button.slick-prev {
   left: 5rem;
 }
@@ -494,7 +495,7 @@ footer hr {
     z-index: -1;
     background: url(./images/mobile-banner-img.png) no-repeat center center;
     background-size: cover;
-    height: 40vh;
+    height: 60vh;
     color: white;
     display: flex;
     align-items: center;
@@ -517,7 +518,7 @@ footer hr {
   }
 
   .google-maps-section {
-    height: 30vh;
+    height: 40vh;
   }
   .site-map {
     display: flex;
@@ -557,14 +558,193 @@ footer hr {
   }
 
   .featured-section {
-    display: none;
+    /* display: none; */
+  }
+  .featured-section {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    padding: 0rem 1rem;
+    margin: 2rem 0;
+  }
+
+  .featured-image {
+    background: url(./images/artists/brentFaiyaz.webp) no-repeat center center;
+    background-size: cover;
+  }
+
+  .featured-text {
+    flex: 1;
+    padding: 0 0rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    line-height: 1.5rem;
+    color: #777777;
+    margin-top: 2rem;
+  }
+
+  .featured-text h2 {
+    font-size: 2rem;
+    width: 70%;
+    line-height: 3rem;
+    color: #001d5d;
+  }
+
+  .featured-text button {
+    margin-top: 2rem;
+    width: 10rem;
+    padding: 0.625rem;
+    border: none;
+    background-color: #d9f0d0;
+    color: #42a418;
+  }
+
+  button.slick-prev {
+    left: 0rem;
+  }
+
+  button.slick-next {
+    right: 0rem;
   }
 
   .new-releases {
+    /* display: none; */
+  }
+  .card-body {
     display: none;
   }
 
   .get-in-touch {
-    display: none;
+    /* display: none; */
+  }
+
+  .get-in-touch {
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .get-in-touch .form {
+    width: 100%;
+    border: 1px solid #ccc;
+  }
+
+  .get-in-touch .img-in-form {
+    /* height: 20vh; */
+    height: 100%;
+    width: 100%;
+    background: url(./images/artists/harry-swales-0l0KjNoAfAk-unsplash.jpg)
+      no-repeat center center;
+    background-size: cover;
+    flex-grow: 1;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .form-container {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1rem;
+  }
+
+  .form h2 {
+    color: #001d5d;
+    font-size: 2rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .form span {
+    display: inline-block;
+    margin-top: 1.25rem;
+    margin-bottom: 2.25rem;
+    font-size: 0.8rem;
+    width: 80%;
+    color: #777777;
+  }
+
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .input-section {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    color: #777777;
+    margin-bottom: 1.25rem;
+  }
+
+  input,
+  option,
+  select,
+  textarea {
+    padding: 1.25rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1.25rem;
+    color: #777777;
+  }
+
+  label {
+    font-size: 0.8rem;
+  }
+
+  select {
+    padding-right: 20px;
+    background-repeat: no-repeat;
+    background-position: right center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  select::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 6px 0;
+    border-color: #000 transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .message-label {
+    color: #777777;
+    margin-bottom: 1.25rem;
+  }
+
+  textarea {
+    font-family: "Inter", sans-serif;
+    /* width: 100%; */
+    height: 100%;
+    box-sizing: border-box;
+  }
+
+  form button {
+    background-color: #d9f0d0;
+    border: none;
+    padding: 0.5rem;
+    width: 30%;
   }
 }
